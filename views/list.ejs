@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List v1</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body> -->
+<%- include("header") -%>
+    <div class="box" id="heading">
+     <h1> <%= kindofday%> </h1>
+       </div>
+       <div class="box" id="heading">
+        <h1>TODAY</h1>
+          </div>
+
+    <div class="box">
+       <%for(var i=0;i<newitem.length;i++){ %>
+
+
+         <form class="" action="/delete" method="post">
+       <div class="item">
+         <input type="checkbox" value="<%=newitem[i]._id%>" name="check" onChange="this.form.submit()">
+         <p><%= newitem[i].name %></p>
+      </div>
+      </form>
+
+         <% } %>
+     <form class="item" action="<%=location%>" method="post">
+       <input type="text" name="item" placeholder="New Item">
+       <button type="submit" name="add">+</button>
+     </form>
+
+     </div>
+
+<%- include("footer") -%>
+     <!-- <footer>Copyright 2021 naina sethi</footer>
+  </body>
+</html> -->
